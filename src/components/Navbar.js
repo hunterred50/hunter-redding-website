@@ -126,7 +126,7 @@ class Navbar extends Component {
                 </div>
                 {this.state.displayMusic && <Modal title="My music" closeModal={this.toggleMusic} icon="media_cd" className="modal" 
                 style={{right: "30%", top: "15%", height: 150}}>
-                    Hunter Redding<br />
+                    coming soon...<br />
                 </Modal>}
 
                 <div className="nav-item" onClick={this.togglePhoto}>
@@ -135,7 +135,7 @@ class Navbar extends Component {
                 </div>
                 {this.state.displayPhoto && <Modal title="My photography" closeModal={this.togglePhoto} icon="camera" className="modal" 
                 style={{right: "30%", top: "15%", height: 150}}>
-                    Hunter Redding<br />
+                    coming soon...<br />
                 </Modal>}
 
                 <div className="nav-item" onClick={this.toggleVid}>
@@ -144,7 +144,7 @@ class Navbar extends Component {
                 </div>
                 {this.state.displayVid && <Modal title="My videography" closeModal={this.toggleVid} icon="media_video" className="modal" 
                 style={{right: "30%", top: "15%", height: 150}}>
-                    Hunter Redding<br />
+                    coming soon...<br />
                 </Modal>}
 
                 <div className="nav-item" onClick={this.toggleArt}>
@@ -162,7 +162,7 @@ class Navbar extends Component {
                 </div>
                 {this.state.displayCode && <Modal title="Coding portfolio" closeModal={this.toggleCode} icon="defrag" className="modal" 
                 style={{right: "30%", top: "15%", height: 150}}>
-                    Hunter Redding<br />
+                    coming soon...<br />
                 </Modal>}
 
                 <div className="nav-item" onClick={this.toggleContact}>
