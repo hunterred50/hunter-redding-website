@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Button from '@react95/core/Button'
 import Icon from '@react95/core/Icon'
 import Modal from '@react95/core/Modal'
+// import Contact from './navModals/Contact'
 
 const imgStyle = {  display: "block", 
                     marginTop: "1em", 
@@ -91,7 +92,7 @@ class Navbar extends Component {
             displayCode: !state.displayCode
         }));
     }
-    toggleContact() {
+    toggleContact = () => {
         this.setState(state => ({
             displayContact: !state.displayContact
         }));
@@ -108,74 +109,48 @@ class Navbar extends Component {
                     <Icon name="notepad"/>
                     <p>about me</p>
                 </div>
-                {this.state.displayBio && <Modal title="About me" closeModal={this.toggleBio} icon="notepad" className="modal" 
-                style={{left: "5%", top: "10%", height: 750, width: 400}}>
-                    <img src="https://gdurl.com/pTtP" alt="me" style={imgStyle}/>
-                    <div style={divForText}>
-                        <p><br />Hello, welcome to my website!</p><br />Hunter Redding<br /><br />Web Developer, Musician, Artist
-                    </div>
-                </Modal>}
+                {this.state.displayBio && <Bio display={this.toggleBio} />}
+
                 {this.state.displaySite && <Modal title="About this site" closeModal={this.toggleSite} icon="defrag" className="modal" 
-                style={{left: "27%", top: "40%", height: 200, width: 310}}>
-                    This site was developed using React!<br /><br />Click and drag the blue bar at the top of this window around!<br/><br/>Wow! This is part of the UI library React95
+                style={{left: "27%", top: "40%", height: 170, width: 310}}>
+                    This site was developed using React!<br /><br />Click and drag the blue bar at the top of this window around!<br/><br/>Wow! This was implemented using the UI library React95.
                 </Modal>}
 
                 <div className="nav-item" onClick={this.toggleMusic}>
                     <Icon name="media_cd"/>
                     <p>music</p> {/* click to play a random song from a playlist of songs I've been a part of */}
                 </div>
-                {this.state.displayMusic && <Modal title="My music" closeModal={this.toggleMusic} icon="media_cd" className="modal" 
-                style={{right: "30%", top: "15%", height: 150}}>
-                    coming soon...<br />
-                </Modal>}
+                {this.state.displayMusic && <Music display={this.toggleMusic} />}
 
                 <div className="nav-item" onClick={this.togglePhoto}>
                     <Icon name="camera"/>
                     <p>photography</p>
                 </div>
-                {this.state.displayPhoto && <Modal title="My photography" closeModal={this.togglePhoto} icon="camera" className="modal" 
-                style={{right: "30%", top: "15%", height: 150}}>
-                    coming soon...<br />
-                </Modal>}
+                {this.state.displayPhoto && <Photo display={this.togglePhoto} />}
 
                 <div className="nav-item" onClick={this.toggleVid}>
                     <Icon name="media_video"/>
                     <p>video</p>
                 </div>
-                {this.state.displayVid && <Modal title="My videography" closeModal={this.toggleVid} icon="media_video" className="modal" 
-                style={{right: "30%", top: "15%", height: 150}}>
-                    coming soon...<br />
-                </Modal>}
+                {this.state.displayVid && <Vid display={this.toggleVid} />}
 
                 <div className="nav-item" onClick={this.toggleArt}>
                     <Icon name="mspaint"/>
                     <p>visual art</p>
                 </div>
-                {this.state.displayArt && <Modal title="My art" closeModal={this.toggleArt} icon="mspaint" className="modal" 
-                style={{right: "30%", top: "15%", height: 150}}>
-                    Coming soon...<br />
-                </Modal>}
+                {this.state.displayArt && <Art display={this.toggleArt} />}
 
                 <div className="nav-item" onClick={this.toggleCode}>
                     <Icon name="defrag"/>
                     <p>coding</p>
                 </div>
-                {this.state.displayCode && <Modal title="Coding portfolio" closeModal={this.toggleCode} icon="defrag" className="modal" 
-                style={{right: "30%", top: "15%", height: 150}}>
-                    coming soon...<br />
-                </Modal>}
+                {this.state.displayCode && <Code display={this.toggleCode} />}
 
                 <div className="nav-item" onClick={this.toggleContact}>
                     <Icon name="phone_2"/>
                     <p>contact me</p>
                 </div>
-                {this.state.displayContact && <Modal title="Contact me" closeModal={this.toggleContact} icon="phone_2" className="modal" 
-                style={{right: "5%", top: "5%", height: 150, width: 200}}>
-                    Hunter Redding<br />
-                    hunterred50@gmail.com<br /><br />
-                    <a href="https://www.linkedin.com/in/hunter-redding/" target="_blank" rel="noopener noreferrer">linkedin</a>
-                    <a href="https://github.com/hunterred50" target="_blank" rel="noopener noreferrer">github</a>
-                </Modal>}
+                {this.state.displayContact && <Contact display={this.toggleContact} />}
 
                 <Button>click me!</Button>
             </div>
@@ -183,3 +158,75 @@ class Navbar extends Component {
     }
 }
 export default Navbar
+
+function Bio(props) {
+  return (
+    <Modal title="About me" closeModal={props.display} icon="notepad" className="modal" 
+      style={{left: "5%", top: "10%", height: 650, width: 350}}>
+        <img src="https://gdurl.com/pTtP" alt="me" style={imgStyle}/>
+        <div style={divForText}>
+          <p><br />Hello, welcome to my website!</p><br />My name is Hunter Redding, I'm a software developer, musician, and an artist of many forms.<br /><br />
+          Feel free to use the icons at the top to explore my various works!
+        </div>
+    </Modal>
+  )
+}
+
+function Music(props) {
+  return (
+    <Modal title="My music" closeModal={props.display} icon="media_cd" className="modal" 
+      style={{right: "30%", top: "15%", height: 150}}>
+        coming soon...<br />
+    </Modal>
+  )
+}
+
+function Photo(props) {
+  return (
+    <Modal title="My photography" closeModal={props.display} icon="camera" className="modal" 
+      style={{right: "30%", top: "15%", height: 150}}>
+        coming soon...<br />
+    </Modal>
+  )
+}
+
+function Vid(props) {
+  return (
+    <Modal title="My videography" closeModal={props.display} icon="media_video" className="modal" 
+      style={{right: "30%", top: "15%", height: 150}}>
+        coming soon...<br />
+    </Modal>
+  )
+}
+
+function Art(props) {
+  return (
+    <Modal title="My art" closeModal={props.display} icon="mspaint" className="modal" 
+      style={{right: "30%", top: "15%", height: 150}}>
+        Coming soon...<br />
+    </Modal>
+  )
+}
+
+function Code(props) {
+  return (
+    <Modal title="Coding portfolio" closeModal={props.display} icon="defrag" className="modal" 
+      style={{right: "30%", top: "15%", height: 150}}>
+      coming soon...<br />
+    </Modal>
+  )
+}
+
+function Contact(props) {
+  return (
+    <div>
+      <Modal title="Contact me" closeModal={props.display} icon="phone_2" className="modal" 
+      style={{right: "5%", top: "5%", height: 150, width: 200}}>
+        Hunter Redding<br />
+        hunterred50@gmail.com<br /><br />
+        <a href="https://www.linkedin.com/in/hunter-redding/" target="_blank" rel="noopener noreferrer">linkedin</a>
+        <a href="https://github.com/hunterred50" target="_blank" rel="noopener noreferrer">github</a>
+      </Modal>
+    </div>
+  )
+}
