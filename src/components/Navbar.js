@@ -2,7 +2,13 @@ import React, { Component } from 'react'
 import Button from '@react95/core/Button'
 import Icon from '@react95/core/Icon'
 import Modal from '@react95/core/Modal'
-// import Contact from './navModals/Contact'
+
+import Music from './navModals/Music'
+import Photo from './navModals/Photo'
+import Vid from './navModals/Vid'
+import Art from './navModals/Art'
+import Code from './navModals/Code'
+import Contact from './navModals/Contact'
 
 const imgStyle = {  display: "block", 
                     marginTop: "1em", 
@@ -159,74 +165,17 @@ class Navbar extends Component {
 }
 export default Navbar
 
-function Bio(props) {
-  return (
-    <Modal title="About me" closeModal={props.display} icon="notepad" className="modal" 
-      style={{left: "5%", top: "10%", height: 650, width: 350}}>
-        <img src="https://gdurl.com/pTtP" alt="me" style={imgStyle}/>
-        <div style={divForText}>
-          <p><br />Hello, welcome to my website!</p><br />My name is Hunter Redding, I'm a software developer, musician, and an artist of many forms.<br /><br />
-          Feel free to use the icons at the top to explore my various works!
-        </div>
-    </Modal>
-  )
-}
-
-function Music(props) {
-  return (
-    <Modal title="My music" closeModal={props.display} icon="media_cd" className="modal" 
-      style={{right: "30%", top: "15%", height: 150}}>
-        coming soon...<br />
-    </Modal>
-  )
-}
-
-function Photo(props) {
-  return (
-    <Modal title="My photography" closeModal={props.display} icon="camera" className="modal" 
-      style={{right: "30%", top: "15%", height: 150}}>
-        coming soon...<br />
-    </Modal>
-  )
-}
-
-function Vid(props) {
-  return (
-    <Modal title="My videography" closeModal={props.display} icon="media_video" className="modal" 
-      style={{right: "30%", top: "15%", height: 150}}>
-        coming soon...<br />
-    </Modal>
-  )
-}
-
-function Art(props) {
-  return (
-    <Modal title="My art" closeModal={props.display} icon="mspaint" className="modal" 
-      style={{right: "30%", top: "15%", height: 150}}>
-        Coming soon...<br />
-    </Modal>
-  )
-}
-
-function Code(props) {
-  return (
-    <Modal title="Coding portfolio" closeModal={props.display} icon="defrag" className="modal" 
-      style={{right: "30%", top: "15%", height: 150}}>
-      coming soon...<br />
-    </Modal>
-  )
-}
-
-function Contact(props) {
-  return (
-    <div>
-      <Modal title="Contact me" closeModal={props.display} icon="phone_2" className="modal" 
-      style={{right: "5%", top: "5%", height: 150, width: 200}}>
-        Hunter Redding<br />
-        hunterred50@gmail.com<br /><br />
-        <a href="https://www.linkedin.com/in/hunter-redding/" target="_blank" rel="noopener noreferrer">linkedin</a>
-        <a href="https://github.com/hunterred50" target="_blank" rel="noopener noreferrer">github</a>
+class Bio extends Component {
+  render() {
+    return (
+      <Modal title="About me" closeModal={this.props.display} icon="notepad" className="modal" 
+        style={{left: "5%", top: "10%", height: 650, width: 350}}>
+          <img src="https://gdurl.com/pTtP" alt="me" style={imgStyle}/>
+          <div style={divForText}>
+            <p><br />Hello, welcome to my website!</p><br />My name is Hunter Redding, I'm a software developer, musician, and an artist of many forms.<br /><br />
+            Feel free to use the icons at the top to explore my various works!
+          </div>
       </Modal>
-    </div>
-  )
+    )
+  }
 }
