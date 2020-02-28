@@ -4,8 +4,9 @@ import Modal from '@react95/core/Modal'
 function Art(props) {
   return (
     <Modal title="My art" closeModal={props.display} icon="mspaint" className="modal" 
-      style={{left: "10%", top: "5%", height: "90%", width: "80%",}}>
+      style={{left: "10%", top: "8%", height: "85%", width: "80%",}}>
         <div style={{width: "100%", height: "100%", overflowY: "scroll"}}>
+          coming soon...
           {/* <h3>Sketchbook instagram feed</h3> <br />
           {/* LightWidget WIDGET */} 
           {/* <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
