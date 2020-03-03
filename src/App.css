@@ -73,6 +73,15 @@ body a:hover {
   text-decoration: underline;
 }
 
+.dropdown {
+  z-index: 4;
+}
+
+.drop-item {
+  z-index: 4;
+  height: "10%";
+}
+
 .context {
   width: 100%;
   position: absolute;

@@ -6,7 +6,7 @@ class Contact extends Component {
     return (
       <div>
         <Modal title="Contact me" closeModal={this.props.display} icon="phone_2" className="modal" 
-        style={{right: "2%", top: "2%", height: 150, width: 200}}>
+        style={{right: "2%", top: "8%", height: 150, width: 200}}>
           Hunter Redding<br />
           hunterred50@gmail.com<br /><br />
           <a href="https://www.linkedin.com/in/hunter-redding/" target="_blank" rel="noopener noreferrer">linkedin</a>

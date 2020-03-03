@@ -10,9 +10,10 @@
     src: local('MSSansSerif'), url(./fonts/MS-Sans-Serif.ttf) format('truetype');
 }
 
-body{
+body {
     /* font-family: 'Exo', sans-serif; */
       background: #50868d;  
+      // background: transparent;
     //   font-family: MSSansSerif;
     //   background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
       width: 100%;
@@ -61,6 +62,15 @@ body{
 
 .nav-item::selected {
   text-decoration: underline;
+}
+
+.dropdown {
+  z-index: 4;
+}
+
+.drop-item {
+  z-index: 4;
+  height: "10%";
 }
 
 .context {
