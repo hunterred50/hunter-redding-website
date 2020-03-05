@@ -10,13 +10,14 @@ import Photo from './components/navModals/Photo'
 import Vid from './components/navModals/Vid'
 import Art from './components/navModals/Art'
 import Code from './components/navModals/Code'
+import Contact from './components/navModals/Contact';
 // import Contact from './components/navModals/Contact';
 
 const imgStyle = {  display: "block", 
                     marginTop: "1em", 
                     marginLeft: "auto", 
                     marginRight: "auto", 
-                    width: "270px", 
+                    width: "300px", 
                     height: "380px", 
                     objectPosition: "100% 10%", 
                     objectFit: "cover", 
@@ -25,7 +26,7 @@ const divForText = {display: "block",
                     marginTop: "1em", 
                     marginLeft: "auto", 
                     marginRight: "auto", 
-                    width: 270, 
+                    width: 325, 
                     height: 380, 
                     objectPosition: "100% 10%", 
                     objectFit: "cover" }
@@ -41,7 +42,7 @@ class App extends Component {
       displayVid: false,
       displayArt: false,
       displayCode: false,
-      displayContact: true,
+      displayContact: false,
       bkgdCount: 0
     }
     this.clearState = this.clearState.bind(this);
@@ -171,12 +172,16 @@ class App extends Component {
           <Route exact path='/'>
             {!this.state.displayBio && <Bio display={this.toggleBio} />}
             <Breakpoint medium up>
+            {!this.state.displayContact && <Contact display={this.toggleContact} />}
               {!this.state.displaySite && <Modal title="About this site" closeModal={this.toggleSite} icon="defrag" className="modal" 
-                style={{left: "27%", top: "40%", height: 170, width: 310}}>
+                style={{left: "26%", top: "60%", height: 170, width: 310}}>
                   This site was developed using React!<br /><br />Click and drag the blue bar at the top of this window around!<br/><br/>Wow! This was implemented using the UI library React95.
               </Modal>}
             </Breakpoint>
           </Route>
+          {/* <Route path='/about'> // make another path for bio and make mobile homepage just the site details
+            {!this.state.displayMusic && <Music display={this.toggleMusic} />}
+          </Route> */}
           <Route path='/music'>
             {!this.state.displayMusic && <Music display={this.toggleMusic} />}
           </Route>
@@ -192,6 +197,9 @@ class App extends Component {
           <Route path='/code'>
             {!this.state.displayCode && <Code display={this.toggleCode} />}
           </Route>
+          <Route path='/contact'>
+            {this.state.displayContact && <Contact display={this.toggleContact} />}
+          </Route>
         </Switch>
       </div>
     );
@@ -204,11 +212,19 @@ class Bio extends Component {
   render() {
     return (
       <Modal title="About me" closeModal={this.props.display} icon="notepad" className="modal" 
-        style={{left: "2%", top: "10%", height: 650, width: 350, zIndex: 0}}>
+        style={{left: "3%", top: "7%", height: 670, width: 380, zIndex: 0}}>
           <img src="https://gdurl.com/pTtP" alt="me" style={imgStyle}/>
           <div style={divForText}>
-            <p><br />Hello, welcome to my website!</p><br />My name is Hunter Redding, I'm a software developer, musician, and an artist of many forms.<br /><br />
-            Feel free to use the icons at the top to explore my various works!
+            <Breakpoint medium up>
+              <p><br />Hello, welcome to my website!</p><br />My name is Hunter Redding, I'm a software developer, musician, and an artist of many forms.<br /><br />
+              I'm currently a freelance web developer and artist, if you have interest in working with me, check out the contact window above, thanks!<br /><br />
+              Feel free to use the icons at the top to explore my various works!
+            </Breakpoint>
+            <Breakpoint small down>
+              <p><br />Hello, welcome to my website!</p><br />My name is Hunter Redding, I'm a software developer, musician, and an artist of many forms.<br /><br />
+              I'm currently a freelance web developer and artist, if you have interest in working with me, check out the contact window above, thanks!<br /><br />
+              Feel free to use the start button at the top to explore my various works!
+            </Breakpoint>
           </div>
       </Modal>
     )
