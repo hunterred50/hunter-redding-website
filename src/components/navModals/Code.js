@@ -5,7 +5,7 @@ class Code extends Component {
   render() {
     return (
       <Modal title="Coding portfolio" closeModal={this.props.display} icon="defrag" className="modal" 
-        style={{right: "30%", top: "20%", height: "10%", width: "60%"}}>
+        style={{left: "40%", top: "30%", height: "20%", width: "45%",}}>
         <a href="https://gdurl.com/Jgwe" target="_blank" rel="noopener noreferrer">resume</a><br />
       </Modal>
     )
