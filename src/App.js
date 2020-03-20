@@ -5,6 +5,7 @@ import Modal from '@react95/core/Modal'
 import { Breakpoint } from 'react-socks'
 import { Switch, Route } from 'react-router-dom'
 // import shared from '@react95/core'
+import Bio from './components/navModals/Bio'
 import Music from './components/navModals/Music'
 import Photo from './components/navModals/Photo'
 import Vid from './components/navModals/Vid'
@@ -12,24 +13,6 @@ import Art from './components/navModals/Art'
 import Code from './components/navModals/Code'
 import Contact from './components/navModals/Contact';
 // import Contact from './components/navModals/Contact';
-
-const imgStyle = {  display: "block", 
-                    marginTop: "1em", 
-                    marginLeft: "auto", 
-                    marginRight: "auto", 
-                    width: "300px", 
-                    height: "380px", 
-                    objectPosition: "100% 10%", 
-                    objectFit: "cover", 
-                    boxShadow: "10px 10px" }
-const divForText = {display: "block", 
-                    marginTop: "1em", 
-                    marginLeft: "auto", 
-                    marginRight: "auto", 
-                    width: 325, 
-                    height: 380, 
-                    objectPosition: "100% 10%", 
-                    objectFit: "cover" }
 
 class App extends Component {
   constructor(props) {
@@ -104,7 +87,7 @@ class App extends Component {
       displayCode: !state.displayCode
     }));
   }
-  toggleContact = () => {
+  toggleContact() {
     this.setState(state => ({
       displayContact: !state.displayContact
     }));
@@ -130,6 +113,7 @@ class App extends Component {
       <div className="App" > {/* style={{backgroundImage: "url(" + bkgds[bkgdCount] + ")"}}> */}
         <Breakpoint small down>
           <Navbar 
+            clearState={this.clearState}
             toggleBio={this.toggleBio}
             toggleSite={this.toggleSite}
             toggleMusic={this.toggleMusic}
@@ -150,6 +134,7 @@ class App extends Component {
         </Breakpoint>
         <Breakpoint medium up>
           <Navbar 
+            clearState={this.clearState}
             toggleBio={this.toggleBio}
             toggleSite={this.toggleSite}
             toggleMusic={this.toggleMusic}
@@ -183,22 +168,22 @@ class App extends Component {
             {!this.state.displayMusic && <Music display={this.toggleMusic} />}
           </Route> */}
           <Route path='/music'>
-            {!this.state.displayMusic && <Music display={this.toggleMusic} />}
+            <Music display={this.toggleMusic} close={this.state.displayMusic}/>
           </Route>
           <Route path='/photo'>
-            {!this.state.displayPhoto && <Photo display={this.togglePhoto} />}
+            <Photo display={this.togglePhoto} close={this.state.displayPhoto} />
           </Route>
           <Route path='/vid'>
-            {!this.state.displayVid && <Vid display={this.toggleVid} />}
+            <Vid display={this.toggleVid} close={this.state.displayVid}/>
           </Route>
           <Route path='/art'>
-            {!this.state.displayArt && <Art display={this.toggleArt} />}
+            <Art display={this.toggleArt} close={this.state.displayArt}/>
           </Route>
           <Route path='/code'>
-            {!this.state.displayCode && <Code display={this.toggleCode} />}
+            <Code display={this.toggleCode} close={this.state.displayCode}/>
           </Route>
           <Route path='/contact'>
-            {this.state.displayContact && <Contact display={this.toggleContact} />}
+            <Contact display={this.toggleContact} close={this.state.displayContact}/>
           </Route>
         </Switch>
       </div>
@@ -207,26 +192,3 @@ class App extends Component {
 }
 
 export default App;
-
-class Bio extends Component {
-  render() {
-    return (
-      <Modal title="About me" closeModal={this.props.display} icon="notepad" className="modal" 
-        style={{left: "3%", top: "7%", height: 670, width: 380, zIndex: 0}}>
-          <img src="https://gdurl.com/pTtP" alt="me" style={imgStyle}/>
-          <div style={divForText}>
-            <Breakpoint medium up>
-              <p><br />Hello, welcome to my website!</p><br />My name is Hunter Redding, I'm a software developer, musician, and an artist of many forms.<br /><br />
-              I'm currently a freelance web developer and artist, if you have interest in working with me, check out the contact window above, thanks!<br /><br />
-              Feel free to use the icons at the top to explore my various works!
-            </Breakpoint>
-            <Breakpoint small down>
-              <p><br />Hello, welcome to my website!</p><br />My name is Hunter Redding, I'm a software developer, musician, and an artist of many forms.<br /><br />
-              I'm currently a freelance web developer and artist, if you have interest in working with me, check out the contact window above, thanks!<br /><br />
-              Feel free to use the start button at the top to explore my various works!
-            </Breakpoint>
-          </div>
-      </Modal>
-    )
-  }
-}
