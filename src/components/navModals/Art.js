@@ -1,20 +1,180 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Modal from '@react95/core/Modal'
+import Lightbox from 'react-image-lightbox';
+import Tree from '@react95/core/Tree'
+import { Route } from 'react-router-dom'
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import 'react-image-lightbox/style.css';
 
-function Art(props) {
-  return (
-    <Modal title="My art" closeModal={props.display} icon="mspaint" className="modal" 
-      style={{left: "10%", top: "8%", height: "85%", width: "80%",}}>
-        <div style={{width: "100%", height: "100%", overflowY: "scroll"}}>
-          coming soon...
-          {/* <h3>Sketchbook instagram feed</h3> <br />
-          {/* LightWidget WIDGET */} 
-          {/* <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-          <iframe title="insta" src="//lightwidget.com/widgets/d41457aac05c5cd5ade6cb3d956c2730.html" scrolling="no" allowtransparency="true" className="lightwidget-widget" 
-          style={{width: "70%", height: "100%", border: "0", display: "block", margin: "auto"}}></iframe><br /> */}
-        </div>
-    </Modal>
-  )
+const imgStyle = {  //display: "block", 
+                    // marginTop: "1em", 
+                    // marginLeft: "auto", 
+                    // marginRight: "auto", 
+                    width: "50%", 
+                    // height: "10%", 
+                    objectPosition: "100% 10%", 
+                    objectFit: "cover", 
+                    // boxShadow: "10px 10px" 
+                  }
+
+const imgStyle1 = {  //display: "block", 
+                  // marginTop: "1em", 
+                  // marginLeft: "auto", 
+                  // marginRight: "auto", 
+                  width: "25%", 
+                  // height: "10%", 
+                  objectPosition: "100% 10%", 
+                  objectFit: "cover", 
+                  // boxShadow: "10px 10px" 
+                }
+
+const data = [
+  {
+    id: 0,
+    label: 'art',
+    children: [
+      {
+        id: 0,
+        label: 'pen + digital color',
+        iconName: 'mspaint',
+        onClick: e=> { window.location.replace('/art/pen') },
+      },
+      {
+        id: 1,
+        label: 'painting',
+        iconName: 'mspaint',
+        onClick: e=> { window.location.replace('/art/painting') },
+      },
+      {
+        id: 2,
+        label: 'graphic design & fliers',
+        iconName: 'mspaint',
+        onClick: e=> { window.location.replace('/art/graphic') },
+      },
+    ],
+  },
+];
+
+class Art extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      displayPen: false,
+      displayPaint: false,
+      displayGraphic: false
+    }
+    this.togglePen = this.togglePen.bind(this);
+    this.togglePaint = this.togglePaint.bind(this);
+    this.toggleGraphic = this.toggleGraphic.bind(this);
+  }
+  togglePen() {
+    this.setState(state => ({
+      displayPen: !state.displayPen
+    }));
+  }
+  togglePaint() {
+    this.setState(state => ({
+      displayPaint: !state.displayPaint
+    }));
+  }
+  toggleGraphic() {
+    this.setState(state => ({
+      displayGraphic: !state.displayGraphic
+    }));
+  }
+
+  render() {
+    return (
+      <div>
+        <Modal title="My art" closeModal={this.props.display} icon="mspaint" className="modal" 
+          style={{left: "37.5%", top: "25%", height: "20%", width: "45%",}}>
+            <div style={{width: "100%", height: "100%", overflowY: "scroll"}}>
+              <div style={{display: "flex", justifyContent: "flex-start"}}>
+                <Tree data={data} />
+              </div>
+            </div>
+        </Modal>
+
+        <Route path='/art/pen'>
+        {!this.state.displayPen && <Modal title="pen + digital color" closeModal={this.togglePen} icon="camera" className="modal" style={{left: "10%", top: "8%", height: "85%", width: "80%",}}>
+          <div>
+            <Carousel>
+                <div>
+                    <img src="https://gdurl.com/7gi4" style={{width: "30%"}}/>
+                    {/* <p className="legend">Legend 1</p> */}
+                </div>
+                <div>
+                    <img src="https://gdurl.com/u0MiS" style={imgStyle1}/>
+                </div>
+                <div>
+                    <img src="https://gdurl.com/pmUb" style={{width: "60%"}}/>
+                </div>
+                <div>
+                    <img src="https://gdurl.com/X1ko" style={imgStyle}/>
+                </div>
+                <div>
+                    <img src="https://gdurl.com/iVCA" style={{width: "40%"}}/>
+                </div>
+                <div>
+                    <img src="https://gdurl.com/9WXw" style={{width: "40%"}}/>
+                </div>
+                <div>
+                    <img src="https://gdurl.com/fd2f" style={{width: "40%"}}/>
+                </div>
+                <div>
+                    <img src="https://gdurl.com/tiSd" style={{transform: "rotate(90deg)", width: "50%"}}/>
+                </div>
+                <div>
+                    <img src="https://gdurl.com/MwYc" style={{width: "30%"}}/>
+                </div>
+            </Carousel>
+          </div>
+        </Modal>}
+        </Route>
+
+        <Route path='/art/painting'>
+        {!this.state.displayPaint && <Modal title="paintings" closeModal={this.togglePaint} icon="camera" className="modal" style={{left: "10%", top: "8%", height: "85%", width: "80%",}}>
+          <div>
+            <Carousel>
+                <div>
+                    <img src="https://gdurl.com/vGPt" style={imgStyle}/>
+                </div>
+                <div>
+                    <img src="https://gdurl.com/zayw" style={imgStyle}/>
+                </div>
+                <div>
+                    <img src="https://gdurl.com/ZqJb" style={imgStyle}/>
+                </div>
+                <div>
+                    <img src="https://gdurl.com/H3n6" style={imgStyle}/>
+                </div>
+            </Carousel>
+          </div>
+        </Modal>}
+        </Route>
+
+        <Route path='/art/graphic'>
+        {!this.state.displayGraphic && <Modal title="graphics & fliers" closeModal={this.toggleGraphic} icon="camera" className="modal" style={{left: "10%", top: "8%", height: "85%", width: "80%",}}>
+          <div>
+            <Carousel>
+                <div>
+                    <img src="https://gdurl.com/mY52" style={{width: "30%"}}/>
+                </div>
+                <div>
+                    <img src="https://gdurl.com/RIrp" style={{width: "40%"}}/>
+                </div>
+                <div>
+                    <img src="https://gdurl.com/ACOQ" style={{width: "30%"}}/>
+                </div>
+            </Carousel>
+          </div>
+        </Modal>}
+        </Route>
+      </div>
+    )
+  }
 }
 
 export default Art
