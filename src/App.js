@@ -153,17 +153,18 @@ class App extends Component {
             displayContact={this.state.displayContact}
             changeBkgd={this.changeBkgd} />
         </Breakpoint>
+
         <Switch>
           <Route exact path='/'>
             {!this.state.displayBio && <Bio display={this.toggleBio} />}
             <Breakpoint medium up>
-            {!this.state.displayContact && <Contact display={this.toggleContact} />}
               {!this.state.displaySite && <Modal title="About this site" closeModal={this.toggleSite} icon="defrag" className="modal" 
                 style={{left: "26%", top: "60%", height: 170, width: 310}}>
                   This site was developed using React!<br /><br />Click and drag the blue bar at the top of this window around!<br/><br/>Wow! This was implemented using the UI library React95.
               </Modal>}
             </Breakpoint>
           </Route>
+
           {/* <Route path='/about'> // make another path for bio and make mobile homepage just the site details
             {!this.state.displayMusic && <Music display={this.toggleMusic} />}
           </Route> */}
