@@ -88,19 +88,28 @@ class Photo extends Component {
   render() {
     return (
       <div>
+        {!this.props.close && <Modal title="My photography" closeModal={this.props.display} icon="camera" className="modal" 
+          style={this.props.homeStyle ? {left: "32.5%", top: "20%", height: "20%", width: "45%",} : {left: "5%", top: "10%", height: "82%", width: "90%"}}>
+          <div style={{width: "100%", height: "100%", overflowY: "scroll"}}>
+            <div style={{display: "flex", justifyContent: "flex-start"}}>
+              <Tree data={data} />
+            </div>
+          </div>
+        </Modal>}
+
         <Route path='/photo/portrait'>
           {!this.state.displayPortrait && <Modal title="portraits" closeModal={this.togglePortrait} icon="camera" className="modal" style={{left: "10%", top: "8%", height: "85%", width: "80%",}}>
             <div>
               <Carousel>
                   <div>
-                      <img src="https://gdurl.com/zgt3" style={imgStyle}/>
+                      <img alt="" src="https://gdurl.com/zgt3" style={imgStyle}/>
                       {/* <p className="legend">Legend 1</p> */}
                   </div>
                   <div>
-                      <img src="https://gdurl.com/KNnW" style={imgStyle}/>
+                      <img alt="" src="https://gdurl.com/KNnW" style={imgStyle}/>
                   </div>
                   <div>
-                      <img src="https://gdurl.com/FDqD" style={imgStyle}/>
+                      <img alt="" src="https://gdurl.com/FDqD" style={imgStyle}/>
                   </div>
               </Carousel>
             </div>
@@ -112,52 +121,52 @@ class Photo extends Component {
             <div>
               <Carousel>
                 {/* <div>
-                    <img src={realEstate.map()} style={imgStyle}/>
+                    <img alt="" src={realEstate.map()} style={imgStyle}/>
                 </div> */}
                 <div>
-                    <img src="https://gdurl.com/hzNd" style={imgStyle}/>
+                    <img alt="" src="https://gdurl.com/hzNd" style={imgStyle}/>
                 </div>
                 <div>
-                    <img src="https://gdurl.com/ov9e" style={imgStyle}/>
+                    <img alt="" src="https://gdurl.com/ov9e" style={imgStyle}/>
                 </div>
                 <div>
-                    <img src="https://gdurl.com/hsOK" style={imgStyle}/>
+                    <img alt="" src="https://gdurl.com/hsOK" style={imgStyle}/>
                 </div>
                 <div>
-                    <img src="https://gdurl.com/wKHe" style={imgStyle}/>
+                    <img alt="" src="https://gdurl.com/wKHe" style={imgStyle}/>
                 </div>
                 <div>
-                    <img src="https://gdurl.com/Vba0" style={imgStyle}/>
+                    <img alt="" src="https://gdurl.com/Vba0" style={imgStyle}/>
                 </div>
                 <div>
-                    <img src="https://gdurl.com/m3Tv" style={imgStyle}/>
+                    <img alt="" src="https://gdurl.com/m3Tv" style={imgStyle}/>
                 </div>
                 <div>
-                    <img src="https://gdurl.com/LJuF" style={imgStyle}/>
+                    <img alt="" src="https://gdurl.com/LJuF" style={imgStyle}/>
                 </div>
                 <div>
-                    <img src="https://gdurl.com/0Ufw" style={imgStyle}/>
+                    <img alt="" src="https://gdurl.com/0Ufw" style={imgStyle}/>
                 </div>
                 <div>
-                    <img src="https://gdurl.com/AECy" style={imgStyle}/>
+                    <img alt="" src="https://gdurl.com/AECy" style={imgStyle}/>
                 </div>
                 <div>
-                    <img src="https://gdurl.com/BvfK" style={imgStyle}/>
+                    <img alt="" src="https://gdurl.com/BvfK" style={imgStyle}/>
                 </div>
                 <div>
-                    <img src="https://gdurl.com/ctwk" style={imgStyle}/>
+                    <img alt="" src="https://gdurl.com/ctwk" style={imgStyle}/>
                 </div>
                 <div>
-                    <img src="https://gdurl.com/H0jl" style={imgStyle}/>
+                    <img alt="" src="https://gdurl.com/H0jl" style={imgStyle}/>
                 </div>
                 <div>
-                    <img src="https://gdurl.com/A2XU" style={imgStyle}/>
+                    <img alt="" src="https://gdurl.com/A2XU" style={imgStyle}/>
                 </div>
                 <div>
-                    <img src="https://gdurl.com/KxfL" style={imgStyle}/>
+                    <img alt="" src="https://gdurl.com/KxfL" style={imgStyle}/>
                 </div>
                 <div>
-                    <img src="https://gdurl.com/9M6pX" style={imgStyle}/>
+                    <img alt="" src="https://gdurl.com/9M6pX" style={imgStyle}/>
                 </div>
               </Carousel>
             </div>
@@ -169,13 +178,13 @@ class Photo extends Component {
             <div>
               <Carousel>
                   <div>
-                      <img src="" style={imgStyle}/>
+                      <img alt="" src="" style={imgStyle}/>
                   </div>
                   <div>
-                      <img src="" style={imgStyle}/>
+                      <img alt="" src="" style={imgStyle}/>
                   </div>
                   <div>
-                      <img src="" style={imgStyle}/>
+                      <img alt="" src="" style={imgStyle}/>
                   </div>
               </Carousel>
             </div>
@@ -187,31 +196,24 @@ class Photo extends Component {
             <div>
               <Carousel>
                   <div>
-                      <img src="https://gdurl.com/Vb_I" style={imgStyle}/>
+                      <img alt="" src="https://gdurl.com/Vb_I" style={imgStyle}/>
                   </div>
                   <div>
-                      <img src="https://gdurl.com/Lw5n" style={imgStyle}/>
+                      <img alt="" src="https://gdurl.com/Lw5n" style={imgStyle}/>
                   </div>
                   <div>
-                      <img src="https://gdurl.com/VCIA" style={imgStyle}/>
+                      <img alt="" src="https://gdurl.com/VCIA" style={imgStyle}/>
                   </div>
                   <div>
-                      <img src="https://gdurl.com/GWmt" style={imgStyle}/>
+                      <img alt="" src="https://gdurl.com/GWmt" style={imgStyle}/>
                   </div>
                   <div>
-                      <img src="https://gdurl.com/EtLl" style={imgStyle}/>
+                      <img alt="" src="https://gdurl.com/EtLl" style={imgStyle}/>
                   </div>
               </Carousel>
             </div>
           </Modal>}
         </Route>
-
-        {!this.props.close && <Modal title="My photography" closeModal={this.props.display} icon="camera" className="modal" 
-          style={{left: "32.5%", top: "15%", height: "20%", width: "45%",}}>
-          <div style={{display: "flex", justifyContent: "flex-start"}}>
-            <Tree data={data} />
-          </div>
-        </Modal>}
       </div>
     )
   }

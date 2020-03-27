@@ -44,7 +44,7 @@ class Music extends Component {
     return (
       <div>
       {!this.props.close && <Modal title="My music" closeModal={this.props.display} icon="media_cd" className="modal" 
-        style={{left: "30%", top: "10%", height: "20%", width: "45%",}}>
+        style={this.props.homeStyle ? {left: "30%", top: "15%", height: "20%", width: "45%",} : {left: "5%", top: "10%", height: "82%", width: "90%"}}>
           <div style={{width: "100%", height: "100%", overflowY: "scroll"}}>
             <div style={{display: "flex", justifyContent: "flex-start"}}>
               <Tree data={data} />

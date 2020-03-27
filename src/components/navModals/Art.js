@@ -89,7 +89,7 @@ class Art extends Component {
     return (
       <div>
         <Modal title="My art" closeModal={this.props.display} icon="mspaint" className="modal" 
-          style={{left: "37.5%", top: "25%", height: "20%", width: "45%",}}>
+          style={this.props.homeStyle ? {left: "37.5%", top: "30%", height: "20%", width: "45%",} : {left: "5%", top: "10%", height: "82%", width: "90%"}}>
             <div style={{width: "100%", height: "100%", overflowY: "scroll"}}>
               <div style={{display: "flex", justifyContent: "flex-start"}}>
                 <Tree data={data} />
@@ -102,32 +102,32 @@ class Art extends Component {
           <div>
             <Carousel>
                 <div>
-                    <img src="https://gdurl.com/7gi4" style={{width: "30%"}}/>
+                    <img alt="" src="https://gdurl.com/7gi4" style={{width: "30%"}}/>
                     {/* <p className="legend">Legend 1</p> */}
                 </div>
                 <div>
-                    <img src="https://gdurl.com/u0MiS" style={imgStyle1}/>
+                    <img alt="" src="https://gdurl.com/u0MiS" style={imgStyle1}/>
                 </div>
                 <div>
-                    <img src="https://gdurl.com/pmUb" style={{width: "60%"}}/>
+                    <img alt="" src="https://gdurl.com/pmUb" style={{width: "60%"}}/>
                 </div>
                 <div>
-                    <img src="https://gdurl.com/X1ko" style={imgStyle}/>
+                    <img alt="" src="https://gdurl.com/X1ko" style={imgStyle}/>
                 </div>
                 <div>
-                    <img src="https://gdurl.com/iVCA" style={{width: "40%"}}/>
+                    <img alt="" src="https://gdurl.com/iVCA" style={{width: "40%"}}/>
                 </div>
                 <div>
-                    <img src="https://gdurl.com/9WXw" style={{width: "40%"}}/>
+                    <img alt="" src="https://gdurl.com/9WXw" style={{width: "40%"}}/>
                 </div>
                 <div>
-                    <img src="https://gdurl.com/fd2f" style={{width: "40%"}}/>
+                    <img alt="" src="https://gdurl.com/fd2f" style={{width: "40%"}}/>
                 </div>
                 <div>
-                    <img src="https://gdurl.com/tiSd" style={{transform: "rotate(90deg)", width: "50%"}}/>
+                    <img alt="" src="https://gdurl.com/tiSd" style={{transform: "rotate(90deg)", width: "50%"}}/>
                 </div>
                 <div>
-                    <img src="https://gdurl.com/MwYc" style={{width: "30%"}}/>
+                    <img alt="" src="https://gdurl.com/MwYc" style={{width: "30%"}}/>
                 </div>
             </Carousel>
           </div>
@@ -139,16 +139,16 @@ class Art extends Component {
           <div>
             <Carousel>
                 <div>
-                    <img src="https://gdurl.com/vGPt" style={imgStyle}/>
+                    <img alt="" src="https://gdurl.com/vGPt" style={imgStyle}/>
                 </div>
                 <div>
-                    <img src="https://gdurl.com/zayw" style={imgStyle}/>
+                    <img alt="" src="https://gdurl.com/zayw" style={imgStyle}/>
                 </div>
                 <div>
-                    <img src="https://gdurl.com/ZqJb" style={imgStyle}/>
+                    <img alt="" src="https://gdurl.com/ZqJb" style={imgStyle}/>
                 </div>
                 <div>
-                    <img src="https://gdurl.com/H3n6" style={imgStyle}/>
+                    <img alt="" src="https://gdurl.com/H3n6" style={imgStyle}/>
                 </div>
             </Carousel>
           </div>
@@ -160,13 +160,13 @@ class Art extends Component {
           <div>
             <Carousel>
                 <div>
-                    <img src="https://gdurl.com/mY52" style={{width: "30%"}}/>
+                    <img alt="" src="https://gdurl.com/mY52" style={{width: "30%"}}/>
                 </div>
                 <div>
-                    <img src="https://gdurl.com/RIrp" style={{width: "40%"}}/>
+                    <img alt="" src="https://gdurl.com/RIrp" style={{width: "40%"}}/>
                 </div>
                 <div>
-                    <img src="https://gdurl.com/ACOQ" style={{width: "30%"}}/>
+                    <img alt="" src="https://gdurl.com/ACOQ" style={{width: "30%"}}/>
                 </div>
             </Carousel>
           </div>
