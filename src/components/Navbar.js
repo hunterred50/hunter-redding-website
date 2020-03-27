@@ -1,5 +1,5 @@
 import React from 'react'
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 
 import Button from '@react95/core/Button'
 import Icon from '@react95/core/Icon'
@@ -22,61 +22,113 @@ function Navbar (props) {
     history.push("/" + where);
   }
 
+  let location = useLocation();
+  let home = false; // variable is set true on home page for separate navbar
+  if (location.pathname === '/')
+    home = true;
+  else
+    home = false;
+
   return (
     <div>
       <Breakpoint medium up>
-        <div className="nav">
-          {/* <div className="nav-item" onClick={props.clearState}> option could be to reset to initial state, which would be startup */}
-            <Link className="nav-item" to="/" onClick={props.clearState}>
-              <Icon name="computer_5"/>
-              <p>home</p>
-            </Link>
-          {/* </div> */}
+        {/* navbar on home screen */}
+        {home && <div className="nav">
+          <Link className="nav-item" to="/" onClick={props.clearState}>
+            <Icon name="computer_5"/>
+            <p>home</p>
+          </Link>
 
           <div className="nav-item" onClick={props.toggleBio}>
             <Icon name="notepad"/>
             <p>about me</p>
           </div>
-          {props.displayBio && <Bio display={props.toggleBio} />}
 
-          <div className="nav-item" onClick={props.toggleMusic}> {/* maybe close other sectional modals */}
+          <div className="nav-item" onClick={props.toggleMusic}>
             <Icon name="media_cd"/>
             <p>music</p> {/* click to play a random song from a playlist of songs I've been a part of */}
           </div>
-          {props.displayMusic && <Music display={props.toggleMusic} />}
 
           <div className="nav-item" onClick={props.togglePhoto}>
             <Icon name="camera"/>
             <p>photography</p>
           </div>
-          {props.displayPhoto && <Photo display={props.togglePhoto} />}
 
           <div className="nav-item" onClick={props.toggleVid}>
             <Icon name="media_video"/>
             <p>video</p>
           </div>
-          {props.displayVid && <Vid display={props.toggleVid} />}
 
           <div className="nav-item" onClick={props.toggleArt}>
             <Icon name="mspaint"/>
             <p>visual art</p>
           </div>
-          {props.displayArt && <Art display={props.toggleArt} />}
 
           <div className="nav-item" onClick={props.toggleCode}>
             <Icon name="defrag"/>
             <p>coding</p>
           </div>
-          {props.displayCode && <Code display={props.toggleCode} />}
 
           <div className="nav-item" onClick={props.toggleContact}>
             <Icon name="phone_2"/>
             <p>contact me</p>
           </div>
-          {!props.displayContact && <Contact display={props.toggleContact} />}
+          
+          {props.displayBio && <Bio display={props.toggleBio} />}
+          {!props.displayContact && <Contact display={props.toggleContact} homeStyle={true}/>}
+          {props.displayMusic && <Music display={props.toggleMusic} homeStyle={true}/>}
+          {props.displayPhoto && <Photo display={props.togglePhoto} homeStyle={true}/>}
+          {props.displayVid && <Vid display={props.toggleVid} homeStyle={true}/>}
+          {props.displayArt && <Art display={props.toggleArt} homeStyle={true}/>}
+          {props.displayCode && <Code display={props.toggleCode} homeStyle={true}/>}
 
           {/* <Button onClick={props.changeBkgd}>click me!</Button> */}
-        </div>
+        </div>}
+
+        {/* navbar on component screens */}
+        {!home && <div className="nav">
+          <Link className="nav-item" to="/" onClick={() => handleClick("")}>
+            <Icon name="computer_5"/>
+            <p>home</p>
+          </Link>
+
+          <div className="nav-item" onClick={() => handleClick("")}>
+            <Icon name="notepad"/>
+            <p>about me</p>
+          </div>
+
+          <div className="nav-item" onClick={() => handleClick("music")}>
+            <Icon name="media_cd"/>
+            <p>music</p> {/* click to play a random song from a playlist of songs I've been a part of */}
+          </div>
+
+          <div className="nav-item" onClick={() => handleClick("photo")}>
+            <Icon name="camera"/>
+            <p>photography</p>
+          </div>
+
+          <div className="nav-item" onClick={() => handleClick("vid")}>
+            <Icon name="media_video"/>
+            <p>video</p>
+          </div>
+
+          <div className="nav-item" onClick={() => handleClick("art")}>
+            <Icon name="mspaint"/>
+            <p>visual art</p>
+          </div>
+
+          <div className="nav-item" onClick={() => handleClick("code")}>
+            <Icon name="defrag"/>
+            <p>coding</p>
+          </div>
+
+          <div className="nav-item" onClick={() => handleClick("contact")}>
+            <Icon name="phone_2"/>
+            <p>contact me</p>
+          </div>
+
+          {/* <Button onClick={props.changeBkgd}>click me!</Button> */}
+        </div>}
       </Breakpoint>
       
       <Breakpoint small down>
