@@ -73,8 +73,8 @@ function Navbar (props) {
             <Icon name="phone_2"/>
             <p>contact me</p>
           </div>
-          
-          {props.displayBio && <Bio display={props.toggleBio} />}
+
+          {!props.displayBio && <Bio display={props.toggleBio} />}
           {!props.displayContact && <Contact display={props.toggleContact} homeStyle={true}/>}
           {props.displayMusic && <Music display={props.toggleMusic} homeStyle={true}/>}
           {props.displayPhoto && <Photo display={props.togglePhoto} homeStyle={true}/>}
