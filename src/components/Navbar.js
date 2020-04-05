@@ -1,7 +1,7 @@
 import React from 'react'
 import { useHistory, useLocation } from "react-router-dom";
 
-import Button from '@react95/core/Button'
+// import Button from '@react95/core/Button'
 import Icon from '@react95/core/Icon'
 import List from '@react95/core/List'
 

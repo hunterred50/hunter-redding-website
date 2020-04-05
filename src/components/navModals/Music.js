@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Modal from '@react95/core/Modal'
 import Tree from '@react95/core/Tree'
-import { Route } from 'react-router-dom'
+// import { Route } from 'react-router-dom'
 
 const data = [
   {
@@ -37,14 +37,14 @@ const data = [
 ];
 
 class Music extends Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
   render() {
     return (
       <div>
       {!this.props.close && <Modal title="My music" closeModal={this.props.display} icon="media_cd" className="modal" 
-        style={this.props.homeStyle ? {left: "30%", top: "15%", height: "20%", width: "45%",} : {left: "5%", top: "10%", height: "82%", width: "90%"}}>
+        style={this.props.homeStyle ? {left: "30%", top: "100px", height: "15em", width: "44em",position: "absolute"} : {left: "5%", top: "10%", height: "82%", width: "90%"}}>
           <div style={{width: "100%", height: "100%", overflowY: "scroll"}}>
             <div style={{display: "flex", justifyContent: "flex-start"}}>
               <Tree data={data} />

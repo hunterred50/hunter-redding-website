@@ -44,6 +44,10 @@ body a:hover {
   color: black;
 }
 
+.nav {
+  position: relative;
+}
+
 .nav-item {
   font-family: MSSansSerif;
   font-size: .8em;
