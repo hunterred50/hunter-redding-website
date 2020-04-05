@@ -107,7 +107,7 @@ class App extends Component {
   }
 
   render() {
-    const bkgds = ["https://gdurl.com/7YDR", "https://gdurl.com/a01J", "https://gdurl.com/jK8m"]
+    // const bkgds = ["https://gdurl.com/7YDR", "https://gdurl.com/a01J", "https://gdurl.com/jK8m"]
 
     return (
       <div className="App" > {/* style={{backgroundImage: "url(" + bkgds[bkgdCount] + ")"}}> */}
@@ -159,7 +159,7 @@ class App extends Component {
             {!this.state.displayBio && <Bio display={this.toggleBio} />}
             <Breakpoint medium up>
               {!this.state.displaySite && <Modal title="About this site" closeModal={this.toggleSite} icon="defrag" className="modal" 
-                style={{left: "26%", top: "60%", height: 170, width: 310}}>
+                style={{right: "8%", top: "68%", height: 170, width: 310}}>
                   This site was developed using React!<br /><br />Click and drag the blue bar at the top of this window around!<br/><br/>Wow! This was implemented using the UI library React95.
               </Modal>}
             </Breakpoint>
