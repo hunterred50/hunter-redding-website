@@ -89,7 +89,7 @@ class Art extends Component {
     return (
       <div>
         <Modal title="My art" closeModal={this.props.display} icon="mspaint" className="modal" 
-          style={this.props.homeStyle ? {left: "37.5%", top: "30%", height: "20%", width: "45%",} : {left: "5%", top: "10%", height: "82%", width: "90%"}}>
+          style={this.props.homeStyle ? {left: "37.5%", top: "250px", height: "15em", width: "44em",} : {left: "5%", top: "10%", height: "82%", width: "90%"}}>
             <div style={{width: "100%", height: "100%", overflowY: "scroll"}}>
               <div style={{display: "flex", justifyContent: "flex-start"}}>
                 <Tree data={data} />
@@ -130,6 +130,9 @@ class Art extends Component {
                     <img alt="" src="https://gdurl.com/MwYc" style={{width: "30%"}}/>
                 </div>
             </Carousel>
+            <div style={{display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center"}}>
+            <p>interested in commissioning me? <a href="../contact">contact me for details</a></p>
+            </div>
           </div>
         </Modal>}
         </Route>
