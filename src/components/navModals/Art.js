@@ -33,6 +33,7 @@ const data = [
   {
     id: 0,
     label: 'art',
+    onClick: e=> { window.location.replace('/art') },
     children: [
       {
         id: 0,
