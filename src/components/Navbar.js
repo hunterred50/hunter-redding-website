@@ -5,7 +5,6 @@ import { useHistory, useLocation } from "react-router-dom";
 import Icon from '@react95/core/Icon'
 import List from '@react95/core/List'
 
-import Bio from './navModals/Bio'
 import Music from './navModals/Music'
 import Photo from './navModals/Photo'
 import Vid from './navModals/Vid'
