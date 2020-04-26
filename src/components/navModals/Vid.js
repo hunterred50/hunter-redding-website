@@ -68,17 +68,20 @@ class Vid extends Component {
               <Tree data={data} />
               <div style={{marginLeft: "35px", lineHeight: "35px", maxWidth: "90%"}}>
                 A music video I co-directed with my good Chris for ASTN's hit song "Love No More:"<br/>
-                <iframe width="90%" height="315" src="https://www.youtube.com/embed/nt7eAgEZgZA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen/>
+                <iframe title="loveNoMore" width="90%" height="315" src="https://www.youtube.com/embed/nt7eAgEZgZA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen/>
+                <br/>
+                A short film I codirected and co-wrote entitled "Best for You" (2017):
+                <iframe title="bestForYou" width="90%" height="315" src="https://www.youtube.com/embed/saISauKiY5o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen/>
                 <br/>
                 A sampler video of multi-cam footage I put together from Panama City's local DIY music festival Summerfest 2019. 
                 Follow the annotation at the end of the video to see the full playlist of videos from the day:
-                <iframe width="90%" height="315" src="https://www.youtube.com/embed/fDlYsprVIWA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen/>
+                <iframe title="summerfest" width="90%" height="315" src="https://www.youtube.com/embed/fDlYsprVIWA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen/>
                 <br/>
                 A fun stop motion animation I put together with my friend Nathan:
-                <iframe width="90%" height="315" src="https://www.youtube.com/embed/HiiC8t275Tg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen/>
+                <iframe title="bert" width="90%" height="315" src="https://www.youtube.com/embed/HiiC8t275Tg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen/>
                 <br/>
                 A melancholy short film I made in memory of a lost cat:
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/P-M2UA4M6_8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen/>
+                <iframe title="destinyLost" width="560" height="315" src="https://www.youtube.com/embed/P-M2UA4M6_8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen/>
               </div>
             </div>
           </div>
