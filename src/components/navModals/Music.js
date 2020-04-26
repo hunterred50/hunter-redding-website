@@ -38,9 +38,6 @@ const data = [
 ];
 
 class Music extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
   render() {
     return (
       <div>
@@ -52,15 +49,15 @@ class Music extends Component {
               <br/>
               <div style={{marginLeft: "35px", lineHeight: "35px", maxWidth: "90%"}}>
                 Later, Dude is a three piece emo band that I played bass for, but is on an indefinite hiatus. Here is our debut LP:
-                <iframe src="https://open.spotify.com/embed/album/2O5iwu3bhuY425NzX232f7" width="80%" height="200" frameborder="0" allowtransparency="true" allow="encrypted-media"/>
+                <iframe title="laterDude" src="https://open.spotify.com/embed/album/2O5iwu3bhuY425NzX232f7" width="80%" height="200" frameborder="0" allowtransparency="true" allow="encrypted-media"/>
                 <br/>Blind Tiger is an active four piece, mathcore, hard rock band that I joined in March 2018.
                 I've played bass for Blind Tiger on our tours throughout the Southeast ever since. We are in the process
                 of recording our second EP and second LP, the first official releases that I've been a part of recording.
                 Here's the most recent release from Blind Tiger:
-                <iframe src="https://open.spotify.com/embed/album/2K8GFA0sQhnHFAZQxvgDeF" width="80%" height="200" frameborder="0" allowtransparency="true" allow="encrypted-media"/>
+                <iframe title="lockTheGate" src="https://open.spotify.com/embed/album/2K8GFA0sQhnHFAZQxvgDeF" width="80%" height="200" frameborder="0" allowtransparency="true" allow="encrypted-media"/>
                 <br/>Bulk. is a four piece hardcore band that began in early 2018 and is now on an indefinite hiatus.
                 I also played bass for Bulk. for most of its life as a band.
-                <iframe src="https://open.spotify.com/embed/album/7504vT4OcVemDqHqJ8mYfw" width="80%" height="200" frameborder="0" allowtransparency="true" allow="encrypted-media"/>
+                <iframe title="fadedRose" src="https://open.spotify.com/embed/album/7504vT4OcVemDqHqJ8mYfw" width="80%" height="200" frameborder="0" allowtransparency="true" allow="encrypted-media"/>
               </div>
             </div>
           </div>
