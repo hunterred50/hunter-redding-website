@@ -9,9 +9,14 @@ class Code extends Component {
         <div style={this.props.homeStyle ? {width: "100%", maxHeight: "200px", overflowY: "scroll"} : {width: "100%", maxHeight: "560px", overflowY: "scroll"}}>
           <a href="https://gdurl.com/Jgwe" target="_blank" rel="noopener noreferrer">resume</a>
           <br/><br/>
-          <p><a href="https://chromadecor.herokuapp.com/" target="_blank" rel="noopener noreferrer"><h2>ChromaDecor</h2></a>Helped create the frontend of this interior design app. For a software engineering college course, my colleagues and I created this app using ReactJS and NodeJS, which utilized the Amazon API to generate a selection of furniture based on a generated color palette and a choice of a furniture option. We used firebase for our database and Cloudinary for storing images.</p>
+          {/* <p><a href="https://chromadecor.herokuapp.com/" target="_blank" rel="noopener noreferrer"><h2>ChromaDecor</h2></a>Helped create the frontend of this interior design app. For a software engineering college course, my colleagues and I created this app using ReactJS and NodeJS, which utilized the Amazon API to generate a selection of furniture based on a generated color palette and a choice of a furniture option. We used firebase for our database and Cloudinary for storing images.</p> */}
+          <p><h2>Schedule Helper</h2>An app to help keep you on track of your daily schedule. Manage all your daily potential to-do list items, categorize your tasks and keep track of the work you're putting in on specific projects. (in development) NodeJS backend, MongoDB database, GraphQL for querying, React with Apollo frontend.</p>
           <br/>
           <p><h2>Actic Boards</h2>(In development) Working on a kanban board web app with a colleague using ReactJS for our frontend (React-Bootstrap UI, Axios for API calls), NodeJS (Express framework) for backend development, and MongoDB (Mongoose) for our data server.</p>
+          <br/>
+          <p><a href="https://redding-construction.now.sh/"><h2>Redding Construction</h2></a>React website for Redding Construction and Landscaping company. (in development)</p>
+          <br/>
+          <p><h2>Creek Mud Records</h2>Official website for Creek Mud Records record label. (in development)</p>
           <br/>
           <p><h2>hunterredding.com</h2>I developed this website as my portfolio using ReactJS and SCSS. For styled components and modals I used React95 UI Library to give my website a unique Windows95 look.</p>
           <br/>
