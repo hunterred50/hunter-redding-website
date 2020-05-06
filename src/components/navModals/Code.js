@@ -10,7 +10,7 @@ class Code extends Component {
           <a href="https://gdurl.com/Jgwe" target="_blank" rel="noopener noreferrer">resume</a>
           <br/><br/>
           {/* <p><a href="https://chromadecor.herokuapp.com/" target="_blank" rel="noopener noreferrer"><h2>ChromaDecor</h2></a>Helped create the frontend of this interior design app. For a software engineering college course, my colleagues and I created this app using ReactJS and NodeJS, which utilized the Amazon API to generate a selection of furniture based on a generated color palette and a choice of a furniture option. We used firebase for our database and Cloudinary for storing images.</p> */}
-          <p><h2>Schedule Helper</h2>An app to help keep you on track of your daily schedule. Manage all your daily potential to-do list items, categorize your tasks and keep track of the work you're putting in on specific projects. (in development) NodeJS backend, MongoDB database, GraphQL for querying, React with Apollo frontend.</p>
+          <p><a href="https://schedule-helper.now.sh/" target="_blank" rel="noopener noreferrer"><h2>Schedule Helper</h2></a>An app to help keep you on track of your daily schedule. Manage all your daily potential to-do list items, categorize your tasks and keep track of the work you're putting in on specific projects. (in development) NodeJS backend, MongoDB database, GraphQL for querying, React with Apollo frontend.</p>
           <br/>
           <p><h2>Actic Boards</h2>(In development) Working on a kanban board web app with a colleague using ReactJS for our frontend (React-Bootstrap UI, Axios for API calls), NodeJS (Express framework) for backend development, and MongoDB (Mongoose) for our data server.</p>
           <br/>
