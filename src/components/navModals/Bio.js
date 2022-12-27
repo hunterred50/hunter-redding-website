@@ -25,17 +25,17 @@ class Bio extends Component {
     return (
       <Modal title="About me" closeModal={this.props.display} icon="notepad" className="modal" 
         style={{left: "3%", top: "7%", height: 670, width: 380, zIndex: 0}}>
-          <img src="https://gdurl.com/pTtP" alt="me" style={imgStyle}/>
+          <img src="https://gdurl.com/8Dnw" alt="me" style={imgStyle}/>
           <div style={divForText}>
             <Breakpoint medium up>
-              <p><br />Hello, welcome to my website!</p><br />My name is Hunter Redding, I'm a videographer, web developer, musician, and artist.<br /><br />
-              I'm currently employed full time as a webmaster/video specialist, but if you have interest in working with me as an artist, check out the contact window above, thanks!<br /><br />
+              <p><br />Hello, welcome to my website!</p><br />My name is Hunter Redding, I'm a web developer, musician, artist, and videographer.<br /><br />
+              I'm currently employed full time as a webmaster/video specialist. Check out the contact window above if you need to reach me, thanks!<br /><br />
               Feel free to use the icons at the top to explore my various works :)
             </Breakpoint>
             <Breakpoint small down>
-              <p><br />Hello, welcome to my website!</p><br />My name is Hunter Redding, I'm a videographer, web developer, musician, and artist.<br /><br />
-              I'm currently employed full time as a webmaster/video specialist, but if you have interest in working with me as an artist, check out the contact window above, thanks!<br /><br />
-              Feel free to use the start button at the top to explore my various works :)
+              <p><br />Hello, welcome to my website!</p><br />My name is Hunter Redding, I'm a web developer, musician, artist, and videographer.<br /><br />
+              I'm currently employed full time as a webmaster/video specialist. Check out the contact window above if you need to reach me, thanks!<br /><br />
+              Feel free to use the icons at the top to explore my various works :)
             </Breakpoint>
           </div>
       </Modal>
